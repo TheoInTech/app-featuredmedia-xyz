@@ -1,0 +1,39 @@
+{
+  "name": "app-featuredmedia-xyz",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.13.1",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@fontsource/inter": "^5.0.20",
+    "@mui/icons-material": "^5.16.7",
+    "@mui/material": "^5.16.7",
+    "@mui/material-nextjs": "^5.16.6",
+    "@permaweb/aoconnect": "^0.0.58",
+    "@tanstack/react-query": "^5.51.23",
+    "arweave-wallet-kit": "^1.0.4",
+    "next": "14.2.5",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hook-form": "^7.52.2",
+    "zod": "^3.23.8",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "babel-plugin-inline-react-svg": "^2.0.2",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "typescript": "^5"
+  }
+}
