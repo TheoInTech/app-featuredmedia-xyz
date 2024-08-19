@@ -76,7 +76,7 @@ export const Navbar = () => {
           alignItems: "center",
           justifyContent: "space-between",
           columnGap: theme.spacing(2),
-          background: theme.palette.neutral[140],
+          background: theme.palette.neutral[160],
         }}
       >
         {/* Left navbar */}
@@ -148,52 +148,54 @@ export const Navbar = () => {
         </Stack>
       </Stack>
 
-      <Stack
-        sx={{
-          flexDirection: "row",
-          alignItems: "center",
-          borderBottom: `1px solid ${alpha(theme.palette.neutral[80], 0.25)}`,
-          borderTop: `1px solid ${alpha(theme.palette.neutral[80], 0.25)}`,
-          background: theme.palette.neutral[140],
-          columnGap: theme.spacing(1),
-        }}
-      >
+      {activeUserType === UserType.BUYER && (
         <Stack
           sx={{
-            ...theme.typography.button,
             flexDirection: "row",
             alignItems: "center",
-            justifyContent: "center",
-            background: theme.palette.neutral[140],
+            borderBottom: `1px solid ${alpha(theme.palette.neutral[80], 0.25)}`,
+            borderTop: `1px solid ${alpha(theme.palette.neutral[80], 0.25)}`,
+            background: theme.palette.neutral[160],
             columnGap: theme.spacing(1),
-            padding: theme.spacing(1),
           }}
         >
-          <Icon name="all-platforms" height={24} width={24} color="#25D9D9" />
-          All Platforms
-        </Stack>
+          <Stack
+            sx={{
+              ...theme.typography.button,
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "center",
+              background: theme.palette.neutral[160],
+              columnGap: theme.spacing(1),
+              padding: theme.spacing(1),
+            }}
+          >
+            <Icon name="all-platforms" height={24} width={24} color="#25D9D9" />
+            All Platforms
+          </Stack>
 
-        <Stack
-          sx={{
-            flexDirection: "row",
-            columnGap: theme.spacing(1),
-            alignItems: "center",
-          }}
-        >
-          <IconButton>
-            <Icon name="glow-kick" height={36} width={36} />
-          </IconButton>
-          <IconButton>
-            <Icon name="glow-youtube" height={36} width={36} />
-          </IconButton>
-          <IconButton>
-            <Icon name="glow-tiktok" height={36} width={36} />
-          </IconButton>
-          <IconButton>
-            <Icon name="glow-twitter" height={36} width={36} />
-          </IconButton>
+          <Stack
+            sx={{
+              flexDirection: "row",
+              columnGap: theme.spacing(1),
+              alignItems: "center",
+            }}
+          >
+            <IconButton>
+              <Icon name="glow-kick" height={36} width={36} />
+            </IconButton>
+            <IconButton>
+              <Icon name="glow-youtube" height={36} width={36} />
+            </IconButton>
+            <IconButton>
+              <Icon name="glow-tiktok" height={36} width={36} />
+            </IconButton>
+            <IconButton>
+              <Icon name="glow-twitter" height={36} width={36} />
+            </IconButton>
+          </Stack>
         </Stack>
-      </Stack>
+      )}
     </Stack>
   );
 };

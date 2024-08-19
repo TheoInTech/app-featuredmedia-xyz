@@ -26,8 +26,8 @@ export const getTheme = () => {
       MuiCssBaseline: {
         styleOverrides: {
           body: {
-            color: palette?.neutral?.[20],
-            backgroundColor: palette?.neutral?.[160],
+            color: palette?.neutral?.[0],
+            backgroundColor: palette?.neutral?.[180],
           },
         },
       },

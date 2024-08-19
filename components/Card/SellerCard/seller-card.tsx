@@ -14,6 +14,7 @@ import {
   TypographyProps,
   useTheme,
 } from "@mui/material";
+import { useState } from "react";
 
 const PropItem = styled(Grid)(({ theme }) => ({
   display: "flex",
@@ -54,18 +55,42 @@ export const SellerCard = ({
   endDate,
 }: ISellerCard) => {
   const theme = useTheme();
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+
+  const handleMouseOver = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovered(false);
+  };
 
   return (
     <Card
+      onMouseOver={handleMouseOver}
+      onMouseOut={handleMouseOut}
       sx={{
         height: "100%",
         color: theme.palette.neutral[0],
         background: theme.palette.neutral[100],
         borderRadius: theme.spacing(2),
         rowGap: theme.spacing(4),
+
+        "&:hover .MuiCardMedia-root": {
+          transition: "transform ease 0.3s",
+          transform: "scale(1.05)",
+        },
       }}
     >
-      <CardMedia sx={{ height: 200 }} image={imageUrl} title={title} />
+      <Box sx={{ height: 200 }}>
+        <CardMedia
+          sx={{
+            height: "100%",
+          }}
+          image={imageUrl}
+          title={title}
+        />
+      </Box>
       <CardContent
         sx={{
           display: "flex",

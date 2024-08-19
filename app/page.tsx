@@ -1,6 +1,7 @@
 "use client";
 
 import { SellerCard } from "@/components";
+import { PATH, replacePathKeys } from "@/constants/paths";
 import { useMarketplaceFilters } from "@/hooks/useMarketplaceFilters";
 import { IExtendedAdSlot } from "@/types/ad-slots.types";
 import { CATEGORIES, SellerCategory } from "@/types/categories.types";
@@ -15,6 +16,7 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
+import Link from "next/link";
 
 export const FilterButton = styled(ButtonBase)(({ theme }) => ({
   ...theme.typography.button,
@@ -120,15 +122,21 @@ const MarketplacePage = () => {
           <Grid container spacing={3} columns={12} width={"100%"}>
             {adSlots.map((ad: IExtendedAdSlot) => (
               <Grid key={`ad-${ad.id}`} item xs={10} md={6} lg={3}>
-                <SellerCard
-                  imageUrl={ad.image_url}
-                  title={ad.title}
-                  priceInUsd={ad.base_price_in_usd}
-                  adTypeInSeconds={ad.ad_duration}
-                  views={ad.analytics?.views_daily ?? 0}
-                  viewTimeframe={ETimeframe.DAILY}
-                  endDate={ad.bidding_end_date}
-                />
+                <Link
+                  href={replacePathKeys(PATH.creatorId, {
+                    creatorId: ad.id,
+                  })}
+                >
+                  <SellerCard
+                    imageUrl={ad.image_url}
+                    title={ad.title}
+                    priceInUsd={ad.base_price_in_usd}
+                    adTypeInSeconds={ad.ad_duration}
+                    views={ad.analytics?.views_daily ?? 0}
+                    viewTimeframe={ETimeframe.DAILY}
+                    endDate={ad.bidding_end_date}
+                  />
+                </Link>
               </Grid>
             ))}
           </Grid>

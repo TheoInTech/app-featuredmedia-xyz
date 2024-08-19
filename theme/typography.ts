@@ -28,6 +28,7 @@ interface TypographyBaseVariants {
   md: React.CSSProperties;
   lg: React.CSSProperties;
   xl: React.CSSProperties;
+  xxl: React.CSSProperties;
 }
 
 declare module "@mui/material/styles" {
@@ -169,6 +170,15 @@ const base: TypographyBaseVariants = {
     fontFamily: FONT_BASE,
     fontSize: "20px",
     fontWeight: 500,
+    lineHeight: "27px",
+    textAlign: "left",
+    textTransform: "none",
+    letterSpacing: "0",
+  },
+  xxl: {
+    fontFamily: FONT_BASE,
+    fontSize: "24px",
+    fontWeight: 600,
     lineHeight: "27px",
     textAlign: "left",
     textTransform: "none",

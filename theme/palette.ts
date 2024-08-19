@@ -23,6 +23,7 @@ interface NeutralColorVariants {
   120: string;
   140: string;
   160: string;
+  180: string;
 }
 
 interface GradientVariants {
@@ -210,6 +211,7 @@ const neutral: NeutralColorVariants = {
   120: "#1F2A32", // Even darker, nearing black, for deep contrast
   140: "#12191F", // Dark, close to black, maintaining a hint of blue
   160: "#0A0F13", // Nearly pure black, with the slightest blue undertone
+  180: "#000000", // Pure black
 };
 
 const success = { main: "#46EB80" };
