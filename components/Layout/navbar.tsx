@@ -46,6 +46,7 @@ export const Navbar = () => {
     setActiveUserType(
       activeUserType === UserType.BUYER ? UserType.SELLER : UserType.BUYER
     );
+
     router.push(
       activeUserType === UserType.BUYER
         ? PATH.marketplace
@@ -70,7 +71,7 @@ export const Navbar = () => {
           alignItems: "center",
           justifyContent: "space-between",
           columnGap: theme.spacing(2),
-          background: theme.palette.neutral[160],
+          background: theme.palette.neutral[140],
         }}
       >
         {/* Left navbar */}
@@ -145,7 +146,7 @@ export const Navbar = () => {
             alignItems: "center",
             borderBottom: `1px solid ${alpha(theme.palette.neutral[80], 0.25)}`,
             borderTop: `1px solid ${alpha(theme.palette.neutral[80], 0.25)}`,
-            background: theme.palette.neutral[160],
+            background: theme.palette.neutral[140],
             columnGap: theme.spacing(1),
           }}
         >

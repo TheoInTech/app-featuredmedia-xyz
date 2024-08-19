@@ -35,7 +35,7 @@ export const UserTypeTabs = ({ onChange, userType }: IUserTypeTabs) => {
         minHeight: "40px",
         borderRadius: theme.spacing(1),
         border: `1px solid ${theme.palette.accentCyan.main}`,
-        borderBottom: `1px solid ${theme.palette.accentCyan.main}`,
+        borderBottom: `1px solid ${theme.palette.accentCyan.dark}`,
         "& .MuiTabs-indicator": {
           display: "none",
           height: 0,

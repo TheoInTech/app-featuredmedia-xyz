@@ -201,15 +201,15 @@ const red: PaletteColorVariants = {
 };
 
 const neutral: NeutralColorVariants = {
-  0: "#FAFCFB",
-  20: "#EBF0ED",
-  40: "#C9D1CD",
-  60: "#8B948F",
-  80: "#505753",
-  100: "#1A201E",
-  120: "#0E1713",
-  140: "#0C1210",
-  160: "#070D0A",
+  0: "#F0F4F8", // Super light blue, close to white
+  20: "#D2D8E0", // Light blue-grey, still soft but more noticeable
+  40: "#A9B2BC", // Mid-range blue-grey, with a darker, more balanced tone
+  60: "#7A8A96", // Darker blue-grey, providing a good contrast against lighter shades
+  80: "#4E5C67", // Deep, strong blue-grey, approaching charcoal
+  100: "#2E3B45", // Very dark bluish charcoal, for strong background elements
+  120: "#1F2A32", // Even darker, nearing black, for deep contrast
+  140: "#12191F", // Dark, close to black, maintaining a hint of blue
+  160: "#0A0F13", // Nearly pure black, with the slightest blue undertone
 };
 
 const success = { main: "#46EB80" };
