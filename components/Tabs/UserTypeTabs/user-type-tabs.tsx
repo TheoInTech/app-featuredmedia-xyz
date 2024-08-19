@@ -2,6 +2,7 @@
 
 import { TERMS, UserType } from "@/types/user-types.types";
 import { Tab as BaseTab, styled, TabProps, Tabs } from "@mui/material";
+import { SyntheticEvent } from "react";
 
 const Tab = styled((props: TabProps) => <BaseTab disableRipple {...props} />)(
   ({ theme }) => ({
@@ -21,7 +22,7 @@ const Tab = styled((props: TabProps) => <BaseTab disableRipple {...props} />)(
 
 interface IUserTypeTabs {
   userType: UserType;
-  onChange: () => void;
+  onChange: (event: SyntheticEvent, newValue: UserType) => void;
 }
 
 export const UserTypeTabs = ({ onChange, userType }: IUserTypeTabs) => {

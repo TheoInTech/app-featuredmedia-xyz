@@ -2,7 +2,7 @@ export const PATH = {
   marketplace: "/",
 
   // Creators
-  // creatorHub: "/creator-hub",
+  creatorHub: "/creator-hub",
   creatorHubDashboard: "/creator-hub/dashboard",
   creatorHubProfile: "/creator-hub/profile",
   creatorHubListings: "/creator-hub/listings",
