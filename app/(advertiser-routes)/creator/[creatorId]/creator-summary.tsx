@@ -1,6 +1,7 @@
 "use client";
 
 import { Icon } from "@/components";
+import { useStore } from "@/store";
 import {
   IconButton as BaseIconButton,
   Stack,
@@ -48,12 +49,10 @@ const MetricsPercent = styled(Typography)(({ theme }) => ({
   color: theme.palette.accentCyan.main,
 }));
 
-interface ICreatorSummary {
-  creatorId: string;
-}
-
-export const CreatorSummary = ({ creatorId }: ICreatorSummary) => {
+export const CreatorSummary = () => {
   const theme = useTheme();
+  const { creator, isLoading } = useStore();
+
   return (
     <Stack rowGap={6}>
       <Stack
@@ -65,7 +64,7 @@ export const CreatorSummary = ({ creatorId }: ICreatorSummary) => {
         }}
       >
         <CreatorImage
-          src="https://loremflickr.com/500/500/dog"
+          src={creator?.image_url ?? "https://loremflickr.com/500/500/dog"}
           alt="banner"
           width={500}
           height={500}
@@ -79,7 +78,7 @@ export const CreatorSummary = ({ creatorId }: ICreatorSummary) => {
           }}
         >
           {/* TODO: Replace with name */}
-          Juicy Slots
+          {creator?.username ?? "Unknown"}
         </Typography>
         <Typography
           sx={{
@@ -87,7 +86,7 @@ export const CreatorSummary = ({ creatorId }: ICreatorSummary) => {
             color: theme.palette.neutral[60],
           }}
         >
-          Entertainment brand that play high stakes slot games
+          {creator?.bio ?? "No bio available."}
         </Typography>
 
         <Stack

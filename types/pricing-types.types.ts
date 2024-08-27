@@ -1,6 +1,6 @@
 export enum PricingType {
-  AUCTION,
-  FIXED,
+  AUCTION = "Auction",
+  FIXED = "Fixed Price",
 }
 
 export const TERMS = {

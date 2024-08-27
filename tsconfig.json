@@ -19,7 +19,10 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@/[creatorId]/*": ["./app/(advertiser-routes)/creator/[creatorId]/*"]
+      "@/[creatorId]/*": ["./app/(advertiser-routes)/creator/[creatorId]/*"],
+      "@/[itemId]/*": [
+        "./app/(advertiser-routes)/creator/[creatorId]/item/[itemId]/*"
+      ]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

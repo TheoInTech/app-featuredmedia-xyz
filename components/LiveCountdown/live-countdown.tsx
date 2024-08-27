@@ -1,23 +1,27 @@
 "use client";
 
 import { StatusBadge } from "@/components";
+import { AdStatus } from "@/types/ad-slots.types";
 import { Stack, Typography, useTheme } from "@mui/material";
 import { useEffect, useState } from "react";
 
 interface ILiveCountdown {
   endDate: number; // Assuming endDate is a timestamp
   showSeconds?: boolean;
+  status?: AdStatus;
 }
 
 export const LiveCountdown = ({
   endDate,
   showSeconds = true,
+  status,
 }: ILiveCountdown) => {
   const theme = useTheme();
+  const currentTime = new Date().getTime() / 1000; // in seconds
+  const hasEnded = currentTime >= endDate;
 
   const calculateTimeLeft = () => {
-    const now = Math.floor(new Date().getTime() / 1000); // Convert now to seconds
-    const difference = endDate - now; // Both endDate and now are in seconds
+    const difference = endDate - currentTime; // Both endDate and now are in seconds
 
     let timeLeft = {
       days: 0,
@@ -67,22 +71,31 @@ export const LiveCountdown = ({
       }}
     >
       <StatusBadge
-        status="Live"
+        status={
+          status
+            ? `${status} ${hasEnded ? "Ended" : "Live"}`
+            : `${hasEnded ? "Ended" : "Live"}`
+        }
         badgeProps={{
-          variant: "success",
+          variant: hasEnded ? "danger" : "success",
+          shouldAnimate: !hasEnded,
         }}
         sx={{
-          color: theme.palette.success.main,
+          color: hasEnded
+            ? theme.palette.danger.main
+            : theme.palette.success.main,
         }}
       />
-      <Stack flexDirection={"row"} columnGap={1}>
-        <Typography variant="button" color={theme.palette.neutral[60]}>
-          ends:
-        </Typography>
-        <Typography variant="button" color={theme.palette.neutral[0]}>
-          {formatTimeLeft()}
-        </Typography>
-      </Stack>
+      {!hasEnded && (
+        <Stack flexDirection={"row"} columnGap={1}>
+          <Typography variant="button" color={theme.palette.neutral[60]}>
+            ends:
+          </Typography>
+          <Typography variant="button" color={theme.palette.neutral[0]}>
+            {formatTimeLeft()}
+          </Typography>
+        </Stack>
+      )}
     </Stack>
   );
 };

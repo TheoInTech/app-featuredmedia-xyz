@@ -2,9 +2,9 @@
 
 import { SellerCard } from "@/components";
 import { PATH, replacePathKeys } from "@/constants/paths";
-import { useMarketplaceFilters } from "@/hooks/useMarketplaceFilters";
-import { IExtendedAdSlot } from "@/types/ad-slots.types";
+import { useMarketplace } from "@/hooks/useMarketplace";
 import { CATEGORIES, SellerCategory } from "@/types/categories.types";
+import { ISellerCard } from "@/types/seller-types.types";
 import { ETimeframe } from "@/types/timeframe.types";
 import { Close as CloseIcon } from "@mui/icons-material";
 import {
@@ -38,8 +38,8 @@ export const FilterButton = styled(ButtonBase)(({ theme }) => ({
 const MarketplacePage = () => {
   const theme = useTheme();
 
-  const { adSlots, selectedSellerCategory, setSelectedSellerCategory } =
-    useMarketplaceFilters();
+  const { sellers, selectedSellerCategory, setSelectedSellerCategory } =
+    useMarketplace();
 
   const handleCategoryClick = (category: SellerCategory) => {
     setSelectedSellerCategory(category);
@@ -117,24 +117,23 @@ const MarketplacePage = () => {
         </Stack>
       </Stack>
 
-      <Stack gap={6}>
-        {adSlots.length > 0 ? (
+      <Stack alignItems={"center"}>
+        {sellers.length > 0 ? (
           <Grid container spacing={3} columns={12} width={"100%"}>
-            {adSlots.map((ad: IExtendedAdSlot) => (
-              <Grid key={`ad-${ad.id}`} item xs={10} md={6} lg={3}>
+            {sellers.map((seller: ISellerCard) => (
+              <Grid key={`seller-${seller.id}`} item xs={10} md={6} lg={3}>
                 <Link
                   href={replacePathKeys(PATH.creatorId, {
-                    creatorId: ad.id,
+                    creatorId: seller.id,
                   })}
                 >
                   <SellerCard
-                    imageUrl={ad.image_url}
-                    title={ad.title}
-                    priceInUsd={ad.base_price_in_usd}
-                    adTypeInSeconds={ad.ad_duration}
-                    views={ad.analytics?.views_daily ?? 0}
+                    imageUrl={seller.image_url}
+                    username={seller.username}
+                    category={seller.category}
+                    totalFollowerCount={seller.total_follower_count}
+                    views={seller?.views_daily ?? 0}
                     viewTimeframe={ETimeframe.DAILY}
-                    endDate={ad.bidding_end_date}
                   />
                 </Link>
               </Grid>

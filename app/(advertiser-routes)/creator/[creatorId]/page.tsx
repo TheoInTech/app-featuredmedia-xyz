@@ -1,12 +1,12 @@
 import { CreatorBanner } from "@/[creatorId]/creator-banner";
-import { adSlots } from "@/__mock__";
-import { Stack } from "@mui/material";
-import { CreatorContent } from "./creator-content";
-import { CreatorSummary } from "./creator-summary";
+import { CreatorContent } from "@/[creatorId]/creator-content";
+import { CreatorSummary } from "@/[creatorId]/creator-summary";
+import { CreatorWrapper } from "@/[creatorId]/creator-wrapper";
+import { sellers } from "@/__mock__";
 
 export async function generateStaticParams() {
   // TODO: Get all the creator IDs from the database
-  const creators = [...adSlots];
+  const creators = [...sellers];
 
   return creators.map((creator) => ({
     creatorId: creator.id,
@@ -23,11 +23,11 @@ const CreatorIdPage = async ({ params }: ICreatorIdPage) => {
   const { creatorId } = params;
 
   return (
-    <Stack>
-      <CreatorBanner creatorId={creatorId} />
-      <CreatorSummary creatorId={creatorId} />
-      <CreatorContent creatorId={creatorId} />
-    </Stack>
+    <CreatorWrapper creatorId={creatorId}>
+      <CreatorBanner />
+      <CreatorSummary />
+      <CreatorContent />
+    </CreatorWrapper>
   );
 };
 

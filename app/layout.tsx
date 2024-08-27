@@ -24,8 +24,8 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <ClientProvider>
+            <Navbar />
             <Container>
-              <Navbar />
               <Box sx={{ height: "110px" }} />
               {children}
             </Container>

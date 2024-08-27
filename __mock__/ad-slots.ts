@@ -16,8 +16,8 @@ export const adSlots: IAdSlot[] = [
     bidding_end_date: 1727701192, // September 30, 2024
     trading_start_date: 1727787592, // October 1, 2024
     trading_end_date: 1730379592, // October 31, 2024
-    creation_start_date: 1730465992, // November 1, 2024
-    creation_end_date: 1732971592, // November 30, 2024
+    content_start_date: 1730465992, // November 1, 2024
+    content_end_date: 1732971592, // November 30, 2024
   },
   {
     id: "K3hMwVFj8DAHX_wvKTU9Z6PmQOMd9XL84HKQjFUQ6Xp",
@@ -33,8 +33,8 @@ export const adSlots: IAdSlot[] = [
     bidding_end_date: 1727701192, // September 30, 2024
     trading_start_date: 1727787592, // October 1, 2024
     trading_end_date: 1730379592, // October 31, 2024
-    creation_start_date: 1730465992, // November 1, 2024
-    creation_end_date: 1732971592, // November 30, 2024
+    content_start_date: 1730465992, // November 1, 2024
+    content_end_date: 1732971592, // November 30, 2024
   },
   {
     id: "L4hMzVFj7DAHX_wvKTU9Z6PmQOMd9XL84HKQjFUQ6Xp",
@@ -50,8 +50,8 @@ export const adSlots: IAdSlot[] = [
     bidding_end_date: 1727701192, // September 30, 2024
     trading_start_date: 1727787592, // October 1, 2024
     trading_end_date: 1730379592, // October 31, 2024
-    creation_start_date: 1730465992, // November 1, 2024
-    creation_end_date: 1732971592, // November 30, 2024
+    content_start_date: 1730465992, // November 1, 2024
+    content_end_date: 1732971592, // November 30, 2024
   },
   {
     id: "M5hNzVFj6DAHX_wvKTU9Z6PmQOMd9XL84HKQjFUQ6Xp",
@@ -67,8 +67,8 @@ export const adSlots: IAdSlot[] = [
     bidding_end_date: 0,
     trading_start_date: 1727787592, // October 1, 2024
     trading_end_date: 1730379592, // October 31, 2024
-    creation_start_date: 1730465992, // November 1, 2024
-    creation_end_date: 1732971592, // November 30, 2024
+    content_start_date: 1730465992, // November 1, 2024
+    content_end_date: 1732971592, // November 30, 2024
   },
   {
     id: "N6hWzVFj5DAHX_wvKTU9Z6PmQOMd9XL84HKQjFUQ6Xp",
@@ -84,8 +84,8 @@ export const adSlots: IAdSlot[] = [
     bidding_end_date: 1727701192, // September 30, 2024
     trading_start_date: 1727787592, // October 1, 2024
     trading_end_date: 1730379592, // October 31, 2024
-    creation_start_date: 1730465992, // November 1, 2024
-    creation_end_date: 1732971592, // November 30, 2024
+    content_start_date: 1730465992, // November 1, 2024
+    content_end_date: 1732971592, // November 30, 2024
   },
   {
     id: "O7hXzVFj4DAHX_wvKTU9Z6PmQOMd9XL84HKQjFUQ6Xp",
@@ -101,8 +101,8 @@ export const adSlots: IAdSlot[] = [
     bidding_end_date: 0,
     trading_start_date: 1727787592, // October 1, 2024
     trading_end_date: 1730379592, // October 31, 2024
-    creation_start_date: 1730465992, // November 1, 2024
-    creation_end_date: 1732971592, // November 30, 2024
+    content_start_date: 1730465992, // November 1, 2024
+    content_end_date: 1732971592, // November 30, 2024
   },
   {
     id: "P8hYzVFj3DAHX_wvKTU9Z6PmQOMd9XL84HKQjFUQ6Xp",
@@ -118,8 +118,8 @@ export const adSlots: IAdSlot[] = [
     bidding_end_date: 1727701192, // September 30, 2024
     trading_start_date: 1727787592, // October 1, 2024
     trading_end_date: 1730379592, // October 31, 2024
-    creation_start_date: 1730465992, // November 1, 2024
-    creation_end_date: 1732971592, // November 30, 2024
+    content_start_date: 1730465992, // November 1, 2024
+    content_end_date: 1732971592, // November 30, 2024
   },
   {
     id: "Q9hZzVFj2DAHX_wvKTU9Z6PmQOMd9XL84HKQjFUQ6Xp",
@@ -135,8 +135,8 @@ export const adSlots: IAdSlot[] = [
     bidding_end_date: 1727701192, // September 30, 2024
     trading_start_date: 1727787592, // October 1, 2024
     trading_end_date: 1730379592, // October 31, 2024
-    creation_start_date: 1730465992, // November 1, 2024
-    creation_end_date: 1732971592, // November 30, 2024
+    content_start_date: 1730465992, // November 1, 2024
+    content_end_date: 1732971592, // November 30, 2024
   },
   {
     id: "R1hAzVFj1DAHX_wvKTU9Z6PmQOMd9XL84HKQjFUQ6Xp",
@@ -152,8 +152,8 @@ export const adSlots: IAdSlot[] = [
     bidding_end_date: 0,
     trading_start_date: 1727787592, // October 1, 2024
     trading_end_date: 1730379592, // October 31, 2024
-    creation_start_date: 1730465992, // November 1, 2024
-    creation_end_date: 1732971592, // November 30, 2024
+    content_start_date: 1730465992, // November 1, 2024
+    content_end_date: 1732971592, // November 30, 2024
   },
   {
     id: "S2hBzVFj0DAHX_wvKTU9Z6PmQOMd9XL84HKQjFUQ6Xp",
@@ -169,8 +169,8 @@ export const adSlots: IAdSlot[] = [
     bidding_end_date: 1727701192, // September 30, 2024
     trading_start_date: 1727787592, // October 1, 2024
     trading_end_date: 1730379592, // October 31, 2024
-    creation_start_date: 1730465992, // November 1, 2024
-    creation_end_date: 1732971592, // November 30, 2024
+    content_start_date: 1730465992, // November 1, 2024
+    content_end_date: 1732971592, // November 30, 2024
   },
   {
     id: "T3hCzVFj9DAHX_wvKTU9Z6PmQOMd9XL84HKQjFUQ6Xp",
@@ -186,8 +186,8 @@ export const adSlots: IAdSlot[] = [
     bidding_end_date: 1727701192, // September 30, 2024
     trading_start_date: 1727787592, // October 1, 2024
     trading_end_date: 1730379592, // October 31, 2024
-    creation_start_date: 1730465992, // November 1, 2024
-    creation_end_date: 1732971592, // November 30, 2024
+    content_start_date: 1730465992, // November 1, 2024
+    content_end_date: 1732971592, // November 30, 2024
   },
   {
     id: "U4hDzVFj8DAHX_wvKTU9Z6PmQOMd9XL84HKQjFUQ6Xp",
@@ -203,8 +203,8 @@ export const adSlots: IAdSlot[] = [
     bidding_end_date: 1727701192, // September 30, 2024
     trading_start_date: 1727787592, // October 1, 2024
     trading_end_date: 1730379592, // October 31, 2024
-    creation_start_date: 1730465992, // November 1, 2024
-    creation_end_date: 1732971592, // November 30, 2024
+    content_start_date: 1730465992, // November 1, 2024
+    content_end_date: 1732971592, // November 30, 2024
   },
   {
     id: "V5hEzVFj7DAHX_wvKTU9Z6PmQOMd9XL84HKQjFUQ6Xp",
@@ -220,8 +220,8 @@ export const adSlots: IAdSlot[] = [
     bidding_end_date: 1727701192, // September 30, 2024
     trading_start_date: 1727787592, // October 1, 2024
     trading_end_date: 1730379592, // October 31, 2024
-    creation_start_date: 1730465992, // November 1, 2024
-    creation_end_date: 1732971592, // November 30, 2024
+    content_start_date: 1730465992, // November 1, 2024
+    content_end_date: 1732971592, // November 30, 2024
   },
   {
     id: "W6hFzVFj6DAHX_wvKTU9Z6PmQOMd9XL84HKQjFUQ6Xp",
@@ -237,8 +237,8 @@ export const adSlots: IAdSlot[] = [
     bidding_end_date: 0,
     trading_start_date: 1727787592, // October 1, 2024
     trading_end_date: 1730379592, // October 31, 2024
-    creation_start_date: 1730465992, // November 1, 2024
-    creation_end_date: 1732971592, // November 30, 2024
+    content_start_date: 1730465992, // November 1, 2024
+    content_end_date: 1732971592, // November 30, 2024
   },
   {
     id: "X7hGzVFj5DAHX_wvKTU9Z6PmQOMd9XL84HKQjFUQ6Xp",
@@ -254,7 +254,7 @@ export const adSlots: IAdSlot[] = [
     bidding_end_date: 1727701192, // September 30, 2024
     trading_start_date: 1727787592, // October 1, 2024
     trading_end_date: 1730379592, // October 31, 2024
-    creation_start_date: 1730465992, // November 1, 2024
-    creation_end_date: 1732971592, // November 30, 2024
+    content_start_date: 1730465992, // November 1, 2024
+    content_end_date: 1732971592, // November 30, 2024
   },
 ];

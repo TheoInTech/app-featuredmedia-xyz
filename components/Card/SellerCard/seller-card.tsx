@@ -1,7 +1,7 @@
 "use client";
 
-import { LiveCountdown } from "@/components";
-import { compactNumber, formatDuration } from "@/lib/utils";
+import { compactNumber } from "@/lib/utils";
+import { SellerCategory } from "@/types/categories.types";
 import { ETimeframe } from "@/types/timeframe.types";
 import {
   Box,
@@ -37,22 +37,20 @@ const PropValue = styled(Typography)<TypographyProps>(({ theme }) => ({
 
 interface ISellerCard {
   imageUrl: string;
-  title: string;
-  priceInUsd: number;
-  adTypeInSeconds: number;
+  username: string;
+  totalFollowerCount: number;
+  category: SellerCategory;
   views: number;
   viewTimeframe: ETimeframe;
-  endDate: number;
 }
 
 export const SellerCard = ({
   imageUrl,
-  title,
-  priceInUsd,
-  adTypeInSeconds,
+  username,
+  totalFollowerCount,
+  category,
   views,
   viewTimeframe,
-  endDate,
 }: ISellerCard) => {
   const theme = useTheme();
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -88,7 +86,7 @@ export const SellerCard = ({
             height: "100%",
           }}
           image={imageUrl}
-          title={title}
+          title={username}
         />
       </Box>
       <CardContent
@@ -99,46 +97,25 @@ export const SellerCard = ({
         }}
       >
         <Typography sx={theme.typography.base.md} component="div">
-          {title}
+          {username}
         </Typography>
 
         <Grid container>
-          <PropItem item xs={5}>
-            <PropLabel>Price</PropLabel>
+          <PropItem item xs={6}>
+            <PropLabel>Category</PropLabel>
+            <PropValue>{category}</PropValue>
+          </PropItem>
+          <PropItem item xs={3}>
+            <PropLabel>Followers</PropLabel>
             <PropValue component={"div"}>
-              ${priceInUsd}
-              <Typography
-                variant="button"
-                component={"span"}
-                color={theme.palette.neutral[20]}
-              >
-                USD
-              </Typography>
+              {compactNumber(totalFollowerCount)}
             </PropValue>
           </PropItem>
-          <PropItem item xs={3.5}>
-            <PropLabel>Ad Type</PropLabel>
-            <PropValue>{formatDuration(adTypeInSeconds)}</PropValue>
-          </PropItem>
-          <PropItem item xs={3.5}>
+          <PropItem item xs={3}>
             <PropLabel>{viewTimeframe} Views</PropLabel>
             <PropValue>{compactNumber(views)}</PropValue>
           </PropItem>
         </Grid>
-
-        {endDate > 0 && (
-          <Box
-            sx={{
-              width: "100%",
-              borderRadius: theme.spacing(1),
-              background: theme.palette.neutral[120],
-              padding: theme.spacing(2),
-              alignSelf: "center",
-            }}
-          >
-            <LiveCountdown endDate={endDate} showSeconds={false} />
-          </Box>
-        )}
       </CardContent>
     </Card>
   );

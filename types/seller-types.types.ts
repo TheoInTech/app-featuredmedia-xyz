@@ -38,3 +38,5 @@ export interface ISellerAnalytics {
   views_monthly: number;
   total_follower_count: number;
 }
+
+export type ISellerCard = ISeller & ISellerAnalytics;

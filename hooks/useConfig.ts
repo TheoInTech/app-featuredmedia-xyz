@@ -17,7 +17,9 @@ const config: IBlockchainConfig = {
 
 const useConfig = () => {
   const env =
-    process.env.VITE_BLOCKCHAIN_ENV === "mainnet" ? "mainnet" : "testnet";
+    process.env.NEXT_PUBLIC_BLOCKCHAIN_ENV === "mainnet"
+      ? "mainnet"
+      : "testnet";
   return config[env] as IConfig;
 };
 

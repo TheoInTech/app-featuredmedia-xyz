@@ -51,6 +51,31 @@ export const getTheme = () => {
           }),
         },
       },
+      MuiTableContainer: {
+        defaultProps: {
+          sx: (theme) => ({
+            bgcolor: "transparent",
+            color: theme.palette.neutral[0],
+            borderRadius: theme.spacing(2),
+          }),
+        },
+      },
+      MuiTableRow: {
+        defaultProps: {
+          sx: (theme) => ({
+            border: `1px solid ${theme.palette.neutral[100]}`,
+          }),
+        },
+      },
+      MuiTableCell: {
+        defaultProps: {
+          sx: (theme) => ({
+            bgcolor: "transparent",
+            color: theme.palette.neutral[0],
+            borderRadius: theme.spacing(4),
+          }),
+        },
+      },
     },
   };
 

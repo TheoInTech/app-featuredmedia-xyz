@@ -1,13 +1,14 @@
+"use client";
+
+import { useStore } from "@/store";
 import Image from "next/image";
 
-interface ICreatorBanner {
-  creatorId: string;
-}
+export const CreatorBanner = () => {
+  const { creator } = useStore();
 
-export const CreatorBanner = ({ creatorId }: ICreatorBanner) => {
   return (
     <Image
-      src="https://loremflickr.com/g/1440/362/paris"
+      src={creator?.banner_url ?? "https://loremflickr.com/g/1440/362/paris"}
       alt="banner"
       width={1440}
       height={362}
