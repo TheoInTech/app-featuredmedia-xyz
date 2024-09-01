@@ -25,20 +25,15 @@ const ItemPage = ({ params }: IItemPage) => {
 
   return (
     <Stack
-      sx={(theme) => ({
-        ...theme.typography.base.lg,
+      sx={{
         alignItems: "center",
         justifyContent: "center",
         height: "80vh",
-        rowGap: theme.spacing(2),
-      })}
+        rowGap: "16px",
+      }}
     >
       Oops, you shouldn&apos;t be here.
-      <Link
-        href={replacePathKeys(PATH.creatorId, {
-          creatorId,
-        })}
-      >
+      <Link href={replacePathKeys(PATH.creatorId, { creatorId })}>
         <OutlineButton>Go to creator page</OutlineButton>
       </Link>
     </Stack>

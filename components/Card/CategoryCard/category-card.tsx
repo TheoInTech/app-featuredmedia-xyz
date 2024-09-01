@@ -2,6 +2,7 @@
 
 import { SellerCategory } from "@/types/categories.types";
 import { Box, Typography } from "@mui/material";
+import Image from "next/image";
 import { useState } from "react";
 
 interface ICategoryCard {
@@ -51,7 +52,7 @@ export const CategoryCard = ({
       onTouchEnd={handleMouseLeave}
       onClick={handleClick}
     >
-      <img
+      <Image
         src={colored}
         alt="category streamer colored"
         style={{

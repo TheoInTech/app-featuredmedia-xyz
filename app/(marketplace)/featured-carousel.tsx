@@ -10,6 +10,7 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
+import Image from "next/image";
 
 const FeaturedTitle = styled(Typography)(({ theme }) => ({
   ...theme.typography.h1,
@@ -89,7 +90,7 @@ export const FeaturedCarousel = () => {
             Join Auction
           </Button>
         </FeaturedContent>
-        <img
+        <Image
           src="/assets/featured/1.png"
           alt="featured"
           style={{ height: "70vh", width: "100%", objectFit: "cover" }}

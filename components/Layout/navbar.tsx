@@ -62,6 +62,7 @@ export const Navbar = () => {
     currentPath.includes(PATH.creatorHub)
       ? setActiveUserType(UserType.SELLER)
       : setActiveUserType(UserType.BUYER);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPath]);
 
   return (
