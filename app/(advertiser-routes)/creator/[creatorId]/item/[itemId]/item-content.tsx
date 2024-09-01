@@ -1,5 +1,6 @@
 "use client";
 
+import { BidModal } from "@/[creatorId]/item/[itemId]/bid-modal";
 import {
   GradientButton,
   HelperLink,
@@ -28,7 +29,6 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import { useState } from "react";
-import { BidModal } from "./bid-modal";
 
 const AdPropsPill = styled(Typography)(({ theme }) => ({
   ...theme.typography.base.sm,
@@ -332,11 +332,7 @@ export const ItemContent = () => {
               >
                 Offers
               </Typography>
-              <Divider
-                sx={{
-                  borderColor: theme.palette.neutral[100],
-                }}
-              />
+              <Divider />
               <Table
                 aria-label="offers table"
                 sx={{

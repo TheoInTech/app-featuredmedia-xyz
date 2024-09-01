@@ -12,7 +12,7 @@ const HelperLinkButton = styled(Button)(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
   gap: theme.spacing(0.5),
-  background: "transparent !important",
+  background: "transparent",
   textDecoration: "none",
 
   "&:hover": {
@@ -24,17 +24,17 @@ const HelperLinkButton = styled(Button)(({ theme }) => ({
     },
   },
   "&:focus": {
-    color: theme.palette.neutral[120],
+    color: theme.palette.neutral[100],
     background: "transparent",
     textDecoration: "none",
 
     "& path": {
-      fill: theme.palette.neutral[120],
+      fill: theme.palette.neutral[100],
     },
   },
 }));
 
-interface IHelperLink extends ButtonProps {
+export interface IHelperLink extends ButtonProps {
   children: ReactNode;
   href: string;
   target?: string;

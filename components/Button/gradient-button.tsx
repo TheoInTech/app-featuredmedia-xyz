@@ -14,13 +14,14 @@ const ColorButton = styled(Button)<
       return {
         color: theme.palette.neutral[160],
         background: theme.palette.gradient.primary,
+        transition: "all 0.3s ease-in-out",
         "&:hover:not(:disabled)": {
-          opacity: 1.05,
+          filter: "brightness(1.1)",
           color: theme.palette.neutral[100],
           background: theme.palette.gradient.primary,
         },
         "&:active:not(:disabled)": {
-          opacity: 0.95,
+          filter: "brightness(0.95)",
           color: theme.palette.neutral[180],
           background: theme.palette.gradient.primary,
         },

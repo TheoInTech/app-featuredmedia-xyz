@@ -6,7 +6,6 @@ import { Container } from "@/components";
 import { Navbar } from "@/components/Layout";
 import { ClientProvider } from "@/providers/client-provider";
 import ThemeProvider from "@/theme";
-import { Box } from "@mui/material";
 
 export const metadata: Metadata = {
   title: "Featured Media",
@@ -25,10 +24,7 @@ export default function RootLayout({
         <ThemeProvider>
           <ClientProvider>
             <Navbar />
-            <Container>
-              <Box sx={{ height: "110px" }} />
-              {children}
-            </Container>
+            <Container>{children}</Container>
           </ClientProvider>
         </ThemeProvider>
       </body>

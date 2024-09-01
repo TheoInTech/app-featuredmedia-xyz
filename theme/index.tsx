@@ -76,6 +76,13 @@ export const getTheme = () => {
           }),
         },
       },
+      MuiDivider: {
+        defaultProps: {
+          sx: (theme) => ({
+            borderColor: theme.palette.neutral[100],
+          }),
+        },
+      },
     },
   };
 

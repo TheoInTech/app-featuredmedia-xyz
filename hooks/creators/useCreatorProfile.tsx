@@ -44,13 +44,10 @@ const useCreatorProfile = () => {
       }),
     });
 
-    console.log("fetchCreatorProfile messageId", messageId);
-
     const response = await result({
       message: messageId,
       process: processDB,
     }).then((res) => JSON.parse(res.Messages[0].Data) as ProcessResponse);
-    console.log("fetch response: ", response);
 
     if (!response.success) {
       showToast(

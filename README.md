@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Featured Media
 
-## Getting Started
+![Featured Media Banner](https://github.com/TheoInTech/app-featuredmedia-xyz/blob/main/public/github/banner.png?raw=true)
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Featured media is a decentralized advertising platform that connects media creators to brands through a p2p marketplace. Our main objective is to make media buying and selling seamless and create a more fair market by using data to quality if media opportunities are worth the price per ad placement.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Landing Page: [https://featuredmedia.xyz/](https://featuredmedia.xyz/)
+Web dApp Marketplace: [https://app.featuredmedia.xyz/](https://app.featuredmedia.xyz/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Buy or Bid**: Creators can setup a Buy Now or Auction listing for their available ad placements.
+- **Sell Media**: Creators can make their ad placements for social media and native ads available for media buyers to purchase and trade.
+- **Media Insights**: We collect significant datasets on millions of creators and websites to help brands make better decisions.
+- **Smart Floor Price Suggestions**: A creators monthly growth can directly influence their floor price per ad placement helping create a fair market that rewards high growth channels with high value content.
+- **AI Powered Verification**: We use AI to help us identify content and transcribe it's materials to verify the requirements for their content task has been complete.
+- **Dashboard**: Track your campaigns, listings, overall performance and manage social accounts from one dashboard.
+- **Promo Codes**: We've made it simple for creators to unlock new revenue through promotional codes from a pre-made list of offers within our network.
 
-## Learn More
+## High-level Architecture
 
-To learn more about Next.js, take a look at the following resources:
+![Featured Media High-level Framework](https://github.com/TheoInTech/app-featuredmedia-xyz/blob/main/public/github/high-level-framework.png?raw=true)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Proof-of-Work (AO Processes)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+These are the ao processes created so far, from a few weeks of learning arweave and ao development.
+Note: I'm already using AOS 2.0 in these codebase.
 
-## Deploy on Vercel
+| What it's about                                       | AO Link                                                                                  |
+| ----------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Seller Profile Test #1 (For spawning seller profiles) | [View Process](https://www.ao.link/#/entity/ZduqV3WLB085Vk_7lVa68WBPwv3dIyyxa3ZKoNruXCg) |
+| Seller Registry                                       | [View Process](https://www.ao.link/#/entity/okAQJ464km98CxAqgM_NbIwaiQsWOn9NEuk7FWjmHTQ) |
+| Buyer Profile Test #1 (For spawning buyer profiles)   | [View Process](https://www.ao.link/#/entity/OXXJx_2j0tHWq3JJ4Me3t4VXNz9wGWkhDOcNYjR1nrE) |
+| Buyer Registry                                        | [View Process](https://www.ao.link/#/entity/RrprHIoATC0bY7K_u1_Tmixujn2Gjm5E061epFMcCmM) |
+| Ad Slot Test #1 (Atomic Asset)                        | [View Process](https://www.ao.link/#/entity/OXXJx_2j0tHWq3JJ4Me3t4VXNz9wGWkhDOcNYjR1nrE) |
+| Marketplace                                           | Soon...                                                                                  |
+| AI Verifier                                           | Soon...                                                                                  |
+| CRON for re-fetching social metrics                   | Soon...                                                                                  |
+| Treasury                                              | Soon...                                                                                  |
+| Database (Activity Log, Metrics, Audit Trail, etc.)   | Soon...                                                                                  |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Theo Roque | [@theointech](https://x.com/theointech): theoroque95@gmail.com
+- Eoin Kirwan | [@EoinKirwan28](https://x.com/EoinKirwan28): eoin@ionic-group.co
+
+## Acknowledgments
+
+Special thanks to the [OnlyArweave](https://x.com/onlyarweave) for the continued support and to all the mentors and community members that has been part of the Balangay Builders' Program at [Arweave Philippines](https://x.com/ArweavePH)!

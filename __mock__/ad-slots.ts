@@ -148,8 +148,8 @@ export const adSlots: IAdSlot[] = [
     base_price_in_usd: 500,
     image_url: "https://placehold.co/600x400/5733FF/FFFFFF?text=NativeAd",
     pricing_type: PricingType.FIXED,
-    bidding_start_date: 0,
-    bidding_end_date: 0,
+    bidding_start_date: 1715195592,
+    bidding_end_date: 1717701192, // September 30, 2024
     trading_start_date: 1727787592, // October 1, 2024
     trading_end_date: 1730379592, // October 31, 2024
     content_start_date: 1730465992, // November 1, 2024
