@@ -1,22 +1,27 @@
-"use client";
-
+import { sellers } from "@/__mock__";
+import { OutlineButton } from "@/components";
 import { PATH, replacePathKeys } from "@/constants/paths";
 import { Stack } from "@mui/material";
-import { redirect, usePathname } from "next/navigation";
-import { useEffect } from "react";
+import Link from "next/link";
+
+export async function generateStaticParams() {
+  // TODO: Get all the creator IDs from the database
+  const creators = [...sellers];
+
+  return creators.map((creator) => ({
+    creatorId: creator.id,
+  }));
+}
+
+interface IItemPage {
+  params: {
+    creatorId: string;
+  };
+}
 
 // This page cannot be accessed directly, it's a pass-through for the creator ID page
-const ItemPage = () => {
-  const pathname = usePathname();
-  const creatorId = pathname.split("/")[2];
-
-  useEffect(() => {
-    redirect(
-      replacePathKeys(PATH.marketplace, {
-        creatorId,
-      })
-    );
-  }, []);
+const ItemPage = ({ params }: IItemPage) => {
+  const { creatorId } = params;
 
   return (
     <Stack
@@ -25,9 +30,17 @@ const ItemPage = () => {
         alignItems: "center",
         justifyContent: "center",
         height: "80vh",
+        rowGap: theme.spacing(2),
       })}
     >
-      Redirecting you to creator&apos;s page...
+      Oops, you shouldn&apos;t be here.
+      <Link
+        href={replacePathKeys(PATH.creatorId, {
+          creatorId,
+        })}
+      >
+        <OutlineButton>Go to creator page</OutlineButton>
+      </Link>
     </Stack>
   );
 };

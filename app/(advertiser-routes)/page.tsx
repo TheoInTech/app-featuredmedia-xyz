@@ -18,7 +18,7 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 
-export const FilterButton = styled(ButtonBase)(({ theme }) => ({
+const FilterButton = styled(ButtonBase)(({ theme }) => ({
   ...theme.typography.button,
   display: "flex",
   alignItems: "center",
