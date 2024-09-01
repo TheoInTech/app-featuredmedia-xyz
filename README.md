@@ -6,8 +6,8 @@
 
 Featured media is a decentralized advertising platform that connects media creators to brands through a p2p marketplace. Our main objective is to make media buying and selling seamless and create a more fair market by using data to quality if media opportunities are worth the price per ad placement.
 
-Landing Page: [https://featuredmedia.xyz/](https://featuredmedia.xyz/)
-Web dApp Marketplace: [https://app.featuredmedia.xyz/](https://app.featuredmedia.xyz/)
+- Landing Page: [https://featuredmedia.xyz/](https://featuredmedia.xyz/)
+- Web dApp Marketplace: [https://app.featuredmedia.xyz/](https://app.featuredmedia.xyz/)
 
 ## Features
 
