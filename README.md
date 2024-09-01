@@ -7,7 +7,8 @@
 Featured media is a decentralized advertising platform that connects media creators to brands through a p2p marketplace. Our main objective is to make media buying and selling seamless and create a more fair market by using data to quality if media opportunities are worth the price per ad placement.
 
 - Landing Page: [https://featuredmedia.xyz/](https://featuredmedia.xyz/)
-- Web dApp Marketplace: [https://app.featuredmedia.xyz/](https://app.featuredmedia.xyz/)
+- Web dApp Marketplace: [https://app-featuredmedia-xyz.vercel.app/](https://app-featuredmedia-xyz.vercel.app/)
+  \*\*Note: Still resolving the issues with router and finishing up lua backend code before deploying to the permaweb
 
 ## Features
 
